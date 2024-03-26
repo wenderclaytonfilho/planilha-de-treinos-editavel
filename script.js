@@ -36,8 +36,9 @@ function addRow(tbodyId) {
 
     tbody.appendChild(newRow);
 }
+
 function generatePDF() {
-    var element = document.body;
+    var element = document.getElementById("container");
     html2pdf().from(element).save();
 }
 
