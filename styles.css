@@ -8,6 +8,12 @@ body {
     padding: 20px;
 }
 
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .table {
     margin-bottom: 30px;
 }
@@ -57,4 +63,13 @@ button:hover {
 
 .addButton:hover {
     background-color: #45a049;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }

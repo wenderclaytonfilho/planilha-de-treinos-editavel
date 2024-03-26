@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planilha de Treino</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Olá, João Paulo!</h1>
     <button onclick="addTable()">Adicionar Treino</button>
     <button onclick="generatePDF()">Guardar</button>
-    <div class="container" id="container">
+    <div class="main" id="main">
+        <div class="container" id="container">
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome do aluno">
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 by Wender Filho | Tobias Alves</p>
+        </div>
     </div>
     
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.1/html2pdf.bundle.min.js"></script>
 
 </body>
+
 </html>
