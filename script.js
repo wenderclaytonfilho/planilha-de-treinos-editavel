@@ -57,14 +57,34 @@ function generatePDF() {
 }
 
 function removeRow(button) {
-    var row = button.parentNode.parentNode; 
-    var tbody = row.parentNode;
-    tbody.removeChild(row);
+  var row = button.parentNode.parentNode;
+  var tbody = row.parentNode;
+  tbody.removeChild(row);
 
-  
-    var rows = tbody.querySelectorAll('tr');
-    rows.forEach((row, index) => {
-        var cells = row.querySelectorAll('td');
-      
-    });
+  var rows = tbody.querySelectorAll("tr");
+  rows.forEach((row, index) => {
+    var cells = row.querySelectorAll("td");
+  });
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+  const tables = document.querySelectorAll('table');
+  tables.forEach(table => {
+      const headers = table.querySelectorAll('th');
+      headers.forEach((header, index) => {
+          if (index !== headers.length - 1) {
+              header.style.borderRight = '2px solid #ddd';
+          }
+      });
+
+      const rows = table.querySelectorAll('tr');
+      rows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          cells.forEach((cell, index) => {
+              if (index !== cells.length - 1) {
+                  cell.style.borderRight = '2px solid #ddd';
+              }
+          });
+      });
+  });
+});
