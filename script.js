@@ -7,6 +7,7 @@ function addTable() {
   newTable.innerHTML = `
         <h2>Treino ${String.fromCharCode(
           65 + document.querySelectorAll(".table").length
+          
         )}</h2>
         <table>
             <thead>
